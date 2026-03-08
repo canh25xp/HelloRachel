@@ -40,8 +40,8 @@ Port         Protocol Type              Board Name  FQBN            Core
 
 ```console
 $ arduino-cli compile --fqbn arduino:avr:uno .
-Sketch uses 2008 bytes (6%) of program storage space. Maximum is 32256 bytes.
-Global variables use 212 bytes (10%) of dynamic memory, leaving 1836 bytes for local variables. Maximum is 2048 bytes.
+Sketch uses 2362 bytes (7%) of program storage space. Maximum is 32256 bytes.
+Global variables use 362 bytes (17%) of dynamic memory, leaving 1686 bytes for local variables. Maximum is 2048 bytes.
 
 $ arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno .
 New upload port: /dev/ttyACM0 (serial)
@@ -60,6 +60,18 @@ Monitor port settings:
   stop_bits=1
 
 Connecting to /dev/ttyACM0. Press CTRL-C to exit.
+Arduino Morse Code
+H -> ....
+E -> .
+L -> .-..
+L -> .-..
+O -> ---
+R -> .-.
+A -> .-
+C -> -.-.
+H -> ....
+E -> .
+L -> .-..
 ```
 
 ## References
