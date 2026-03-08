@@ -1,7 +1,7 @@
 // Time definitions for Morse code
-const int TIME_UNIT = 200;       // basic unit (200 ms)
-const int DOT_TIME = TIME_UNIT;  // dot duration
-const int DASH_TIME = TIME_UNIT * 3;
+const int TIME_UNIT = 100;            // basic unit (ms)
+const int DOT_TIME = TIME_UNIT;       // dot duration
+const int DASH_TIME = TIME_UNIT * 3;  // dash duration
 const int SYMBOL_SPACE = TIME_UNIT;
 const int LETTER_SPACE = TIME_UNIT * 3;
 const int WORD_SPACE = TIME_UNIT * 7;
