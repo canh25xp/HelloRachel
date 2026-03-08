@@ -6,7 +6,6 @@ const int SYMBOL_SPACE = TIME_UNIT;
 const int LETTER_SPACE = TIME_UNIT * 3;
 const int WORD_SPACE = TIME_UNIT * 7;
 
-
 // Morse code lookup table
 struct MorseEntry {
   char letter;
@@ -43,6 +42,24 @@ MorseEntry morseTable[] = {
 };
 
 const int MORSETABLESIZE = sizeof(morseTable) / sizeof(MorseEntry);
+
+void sendDot();
+void sendDash();
+void sendSymbol(char symbol);
+void sendLetter(char letter);
+void sendMessage(const char* message);
+
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
+  Serial.println("Arduino Morse Code");
+}
+
+void loop() {
+  sendMessage("HELLO RACHEL");
+  Serial.print("\n");
+  delay(5000);
+}
 
 // Turn LED on for dot
 void sendDot() {
@@ -100,16 +117,4 @@ void sendMessage(const char* message) {
       sendLetter(c);
     }
   }
-}
-
-void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
-  Serial.begin(9600);
-  Serial.println("Arduino Morse Code");
-}
-
-void loop() {
-  sendMessage("HELLO RACHEL");
-  Serial.print("\n");
-  delay(5000);
 }
