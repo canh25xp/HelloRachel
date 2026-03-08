@@ -42,7 +42,7 @@ MorseEntry morseTable[] = {
   { 'Z', "--.." }
 };
 
-const int morseTableSize = sizeof(morseTable) / sizeof(MorseEntry);
+const int MORSETABLESIZE = sizeof(morseTable) / sizeof(MorseEntry);
 
 // Turn LED on for dot
 void sendDot() {
@@ -73,7 +73,7 @@ void sendSymbol(char symbol) {
 // Send Morse code for a letter
 void sendLetter(char letter) {
   letter = toupper(letter);
-  for (int i = 0; i < morseTableSize; i++) {
+  for (int i = 0; i < MORSETABLESIZE; i++) {
     if (morseTable[i].letter == letter) {
       const char* morse = morseTable[i].morse;
       Serial.print(letter);
