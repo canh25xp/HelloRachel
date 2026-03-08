@@ -50,7 +50,7 @@ New upload port: /dev/ttyACM0 (serial)
 ## Serial monitoring
 
 ```console
-$arduino-cli monitor -p /dev/ttyACM0 -c baudrate=9600
+$ arduino-cli monitor -p /dev/ttyACM0 -c baudrate=9600
 Monitor port settings:
   baudrate=9600
   bits=8
